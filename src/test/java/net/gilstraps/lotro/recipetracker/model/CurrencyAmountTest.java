@@ -240,4 +240,19 @@ public class CurrencyAmountTest {
         amt = new CurrencyAmount(-1, -1, -1);
         assertEquals("-1g,-1s,-1c", amt.toString());
     }
+
+    @Test
+    public void testHashCode() {
+        CurrencyAmount ca1 = new CurrencyAmount(1);
+        CurrencyAmount ca1_1 = new CurrencyAmount(0,1);
+        CurrencyAmount ca1_2 = new CurrencyAmount(0,0,1);
+        CurrencyAmount ca2 = new CurrencyAmount(2);
+        CurrencyAmount ca2_1 = new CurrencyAmount(0,2);
+        CurrencyAmount ca2_2 = new CurrencyAmount(0,0,2);
+
+        assertEquals(ca1.hashCode(),ca1_1.hashCode());
+        assertEquals(ca1.hashCode(),ca1_2.hashCode());
+        assertEquals(ca2.hashCode(),ca2_1.hashCode());
+        assertEquals(ca2.hashCode(),ca2_2.hashCode());
+    }
 }

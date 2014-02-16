@@ -3,9 +3,9 @@ package net.gilstraps.lotro.recipetracker.model;
 import java.util.List;
 
 /**
- * Ingredient to a recipe
+ * Item in a recipe or something crafted.
  */
-public interface Ingredient {
+public interface Thing {
 
     public String getName();
 

@@ -1,7 +1,7 @@
 package net.gilstraps.lotro.recipetracker.model;
 
 /**
- * TODO
+ * Represents a raw (harvested) ingredient.
  */
 public class RawIngredient extends AbstractIngredient implements BaseIngredient {
 

@@ -3,7 +3,7 @@ package net.gilstraps.lotro.recipetracker.model;
 /**
  * TODO
  */
-public abstract class AbstractIngredient implements Ingredient {
+public abstract class AbstractIngredient implements Thing {
 
     private String name;
 

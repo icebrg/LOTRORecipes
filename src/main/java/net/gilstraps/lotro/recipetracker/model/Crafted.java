@@ -1,33 +1,31 @@
 package net.gilstraps.lotro.recipetracker.model;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 /**
  * TODO
  */
-public class Crafted extends AbstractIngredient implements Ingredient {
+public class Crafted extends AbstractIngredient implements Thing {
 
-    private Profession craftedBy;
-    private Set<Quantified<Ingredient>> components;
-    private Set<Quantified<Ingredient>> roComponents;
+    private Profession profession;
+    private Set<Quantified<Thing>> components;
+    private Set<Quantified<Thing>> roComponents;
 
-    public Crafted(final String name, final Profession p, final Collection<Quantified<Ingredient>> inputs) {
+    public Crafted(final String name, final Profession p, final Collection<Quantified<Thing>> inputs) {
         super(name);
         p.getClass(); // assure not null
-        craftedBy = p;
+        profession = p;
         inputs.getClass(); // assure not null
         if ( inputs.size() < 1 ) throw new IllegalArgumentException("Crafted items require at lesat one component item.");
-        components = new HashSet<Quantified<Ingredient>>(inputs);
+        components = new HashSet<Quantified<Thing>>(inputs);
     }
 
-    public synchronized Set<Quantified<Ingredient>> getComponents() {
+    public synchronized Set<Quantified<Thing>> getComponents() {
         if (roComponents == null) {
             roComponents = Collections.unmodifiableSet(components);
         }
@@ -41,7 +39,7 @@ public class Crafted extends AbstractIngredient implements Ingredient {
     }
 
     private void addBaseIngredients(final Map<BaseIngredient, Long> ingredients,final long multiplier) {
-        for (Quantified<Ingredient> component : components) {
+        for (Quantified<Thing> component : components) {
             if (component.getT() instanceof Crafted) {
                 ((Crafted)component.getT()).addBaseIngredients(ingredients,component.getQuantity()*multiplier);
             }
@@ -61,6 +59,6 @@ public class Crafted extends AbstractIngredient implements Ingredient {
     }
 
     public Profession getCraftingProfession() {
-        return craftedBy;
+        return profession;
     }
 }

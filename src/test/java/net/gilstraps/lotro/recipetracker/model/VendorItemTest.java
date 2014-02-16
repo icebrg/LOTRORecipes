@@ -14,7 +14,7 @@ public class VendorItemTest {
         VendorItem blueBalloon = new VendorItem("blue balloon",1);
         assertEquals("blue balloon",blueBalloon.getName());
         final CurrencyAmount amt = new CurrencyAmount(1);
-        assertEquals(amt,blueBalloon.getCost());
+        assertEquals(amt,blueBalloon.getApproximateCost());
     }
 
 }
