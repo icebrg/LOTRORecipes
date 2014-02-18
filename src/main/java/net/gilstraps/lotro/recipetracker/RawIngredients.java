@@ -1,7 +1,5 @@
 package net.gilstraps.lotro.recipetracker;
 
-import net.gilstraps.lotro.recipetracker.model.GlobalNames;
-import net.gilstraps.lotro.recipetracker.model.RawIngredient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -29,7 +27,7 @@ public class RawIngredients {
      * Would like to move to a URL which points to a crowd-sourced file on the internet; hopefully soon.
      */
     public void parse(final File f ) throws IOException {
-        String text = readFully(f);
+        String text = FileToString.readFully(f);
         JSONArray object = new JSONArray(text);
         for ( int i = 0 ; i < object.length(); i++ ) {
             String name = object.getString(i);
@@ -38,8 +36,4 @@ public class RawIngredients {
         }
     }
 
-    private String readFully(File f) throws IOException {
-        byte[] encoded = Files.readAllBytes(Paths.get(f.getAbsolutePath()));
-        return UTF8.decode(ByteBuffer.wrap(encoded)).toString();
-    }
 }
