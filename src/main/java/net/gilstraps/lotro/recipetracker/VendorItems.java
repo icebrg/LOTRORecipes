@@ -1,5 +1,8 @@
 package net.gilstraps.lotro.recipetracker;
 
+import net.gilstraps.lotro.recipetracker.model.GlobalNames;
+import net.gilstraps.lotro.recipetracker.model.VendorItem;
+import net.gilstraps.lotro.recipetracker.util.FileToString;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
