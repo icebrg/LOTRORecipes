@@ -1,5 +1,7 @@
-package net.gilstraps.lotro.recipetracker.model;
+package net.gilstraps.lotro.recipetracker;
 
+import net.gilstraps.lotro.recipetracker.model.GlobalNames;
+import net.gilstraps.lotro.recipetracker.model.RawIngredient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -9,19 +11,17 @@ import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Set;
 
 /**
- * Class which loads a JSON file of vendor items. The format is a JSON object with mappings from names to
- * approximate costs.
+ * Class which loads a JSON file of raw ingredients. The format is a JSON array of names of raw ingredients
  */
-public class VendorItems {
+public class RawIngredients {
 
     public static final Charset UTF8 = Charset.forName("UTF-8");
 
     private GlobalNames names;
 
-    public VendorItems(GlobalNames names) {
+    public RawIngredients(GlobalNames names) {
         this.names = names;
     }
 
@@ -30,12 +30,11 @@ public class VendorItems {
      */
     public void parse(final File f ) throws IOException {
         String text = readFully(f);
-        JSONObject object = new JSONObject(text);
-        @SuppressWarnings("unchecked") Set<String> keys = object.keySet();
-        for ( String key : keys ) {
-            Long approximateCost = object.getLong(key);
-            VendorItem item = new VendorItem(key,approximateCost);
-            names.register(item);
+        JSONArray object = new JSONArray(text);
+        for ( int i = 0 ; i < object.length(); i++ ) {
+            String name = object.getString(i);
+            RawIngredient ri = new RawIngredient(name);
+            names.register(ri);
         }
     }
 

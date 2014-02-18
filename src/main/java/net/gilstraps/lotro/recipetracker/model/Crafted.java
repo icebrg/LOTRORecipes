@@ -1,9 +1,11 @@
 package net.gilstraps.lotro.recipetracker.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -60,5 +62,28 @@ public class Crafted extends AbstractIngredient implements Thing {
 
     public Profession getCraftingProfession() {
         return profession;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder(super.getName() + "{\n"
+                + " profession=" + profession + "\n"
+                + " components= {\n");
+        for ( Quantified<Thing> component : components ) {
+            sb.append("    " + component.getT().getName() + ": " + component.getQuantity() + "\n");
+        }
+        sb.append("  }");
+        sb.append("  baseIngredients= {\n");
+        Map<BaseIngredient,Long> baseIngredients = getBaseIngredients();
+        List<BaseIngredient> baseIngredientsList = new ArrayList<>();
+        for ( BaseIngredient baseIngredient : baseIngredients.keySet() ) {
+            baseIngredientsList.add(baseIngredient);
+        }
+        Collections.sort(baseIngredientsList,BaseIngredient.BY_NAME);
+        for ( BaseIngredient baseIngredient : baseIngredientsList ) {
+           sb.append( baseIngredient.getName() + ": " + baseIngredients.get(baseIngredient) + "\n");
+        }
+        sb.append("  }\n}\n");
+        return sb.toString();
     }
 }

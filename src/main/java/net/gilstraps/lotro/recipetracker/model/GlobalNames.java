@@ -15,4 +15,8 @@ public class GlobalNames {
         if ( existing != null ) throw new AlreadyRegisteredException(existing);
         nameToThing.put(t.getName(),t);
     }
+
+    public synchronized Thing get(final String name) {
+        return nameToThing.get(name);
+    }
 }
