@@ -13,6 +13,12 @@ public class VendorItem extends AbstractIngredient implements BaseIngredient {
         this.approximateCost = new CurrencyAmount(coppers);
     }
 
+    public VendorItem(final String name, final CurrencyAmount amount) {
+        super(name);
+        amount.getClass(); // assure not null
+        this.approximateCost = amount;
+    }
+
     public CurrencyAmount getApproximateCost() {
         return approximateCost;
     }

@@ -37,7 +37,7 @@ public class VendorItems {
         JSONObject object = new JSONObject(text);
         @SuppressWarnings("unchecked") Set<String> keys = object.keySet();
         for ( String key : keys ) {
-            CurrencyAmount approximateCost = new CurrencyAmount( object.getString(key) );
+            CurrencyAmount approximateCost = CurrencyAmount.parse( object.getString(key) );
             VendorItem item = new VendorItem(key,approximateCost);
             names.register(item);
         }
