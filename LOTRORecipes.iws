@@ -90,7 +90,25 @@
       <file leaf-file-name="Crafted.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Crafted.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="1330">
+            <state line="14" column="33" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="1204">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CraftedTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/CraftedTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="175" column="0" selection-start="8505" selection-end="8505" vertical-scroll-proportion="0.0" vertical-offset="1353" max-vertical-offset="2520">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CraftedItems.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="13" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="2114">
               <folding />
             </state>
           </provider>
@@ -108,16 +126,34 @@
       <file leaf-file-name="VendorItems.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/VendorItems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="23" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
+            <state line="39" column="53" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RawIngredients.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CurrencyAmount.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="9" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.38373122" vertical-offset="0" max-vertical-offset="1526">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RawIngredients.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/RawIngredients.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="12" selection-start="674" selection-end="674" vertical-scroll-proportion="0.1319623" vertical-offset="0" max-vertical-offset="1167">
+            <state line="22" column="12" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="518">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LOTRORecipes.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="64" selection-start="788" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="910">
               <folding />
             </state>
           </provider>
@@ -142,14 +178,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/PurchasedIngredient.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/VendorIngredient.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Quantity.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CraftedItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CompositeIngredient.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Quantified.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/BaseIngredient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmount.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/CraftedTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/AbstractIngredientTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmountTest.java" />
@@ -166,8 +200,10 @@
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/RawIngredients.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/VendorItems.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/util/FileToString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/VendorItems.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/RawIngredients.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/VendorItems.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmount.java" />
       </list>
     </option>
   </component>
@@ -626,12 +662,12 @@
       <workItem from="1392503206934" duration="9541000" />
       <workItem from="1392513032863" duration="3747000" />
       <workItem from="1392701044760" duration="10000" />
-      <workItem from="1392701080991" duration="47000" />
+      <workItem from="1392701080991" duration="1403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13345000" />
+    <option name="totallyTimeSpent" value="14701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="267" y="105" width="2016" height="1288" extended-state="0" />
@@ -650,10 +686,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803348" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3308004" sideWeight="0.33640167" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3308004" sideWeight="0.24016736" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3308004" sideWeight="0.6627615" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3308004" sideWeight="0.7598326" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28364116" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36695278" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
@@ -685,20 +721,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/RawIngredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmountTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="8" selection-start="4493" selection-end="4493" vertical-scroll-proportion="0.0" vertical-offset="2001" max-vertical-offset="3486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="59" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1008">
@@ -750,15 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/CraftedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="0" selection-start="8647" selection-end="8647" vertical-scroll-proportion="0.0" vertical-offset="2146" max-vertical-offset="2674">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Profession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
@@ -776,13 +789,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/AbstractThingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="32" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="43" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1218">
           <folding />
         </state>
       </provider>
@@ -812,7 +818,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="39" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -845,13 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Crafted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="1330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/RawIngredient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="20" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
@@ -859,16 +858,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/VendorItems.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Crafted.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="23" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
+        <state line="14" column="33" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="1330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/CraftedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="0" selection-start="8505" selection-end="8505" vertical-scroll-proportion="0.0" vertical-offset="1353" max-vertical-offset="2520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="13" selection-start="1979" selection-end="1979" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="2114">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/RawIngredients.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="674" selection-end="674" vertical-scroll-proportion="0.1319623" vertical-offset="0" max-vertical-offset="1167">
+        <state line="22" column="12" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="518">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="64" selection-start="788" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="910">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/VendorItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="53" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="9" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.38373122" vertical-offset="0" max-vertical-offset="1526">
           <folding />
         </state>
       </provider>

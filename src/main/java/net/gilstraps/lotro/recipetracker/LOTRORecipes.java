@@ -21,13 +21,18 @@ import net.gilstraps.lotro.recipetracker.model.GlobalNames;
  * TODO - add support for a base URL with the same basic structure, so we can crowdsource and share the information.
  */
 public class LOTRORecipes {
+
+    private static final String INGREDIENTS = "Ingredients.json";
+    private static final String VENDOR_ITEMS = "VendorItems.json";
+    private static final String CRAFTED_DIR = "crafted";
+
     public static void main(String[] args) throws IOException {
         File root = new File(args[0]);
-        File ingredientsFile = new File(root,"Ingredients.json");
+        File ingredientsFile = new File(root, INGREDIENTS);
         checkPerms(ingredientsFile);
-        File vendorItemsFile = new File(root,"VendorItems.json");
+        File vendorItemsFile = new File(root, VENDOR_ITEMS);
         checkPerms(vendorItemsFile);
-        File crafted = new File(root,"crafted");
+        File crafted = new File(root, CRAFTED_DIR);
         checkPerms(crafted);
         if ( ! crafted.isDirectory() ) {
             System.err.println(crafted.getName() + " is not a directory.");

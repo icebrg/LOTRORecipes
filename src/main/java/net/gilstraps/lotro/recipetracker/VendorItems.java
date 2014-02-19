@@ -1,5 +1,6 @@
 package net.gilstraps.lotro.recipetracker;
 
+import net.gilstraps.lotro.recipetracker.model.CurrencyAmount;
 import net.gilstraps.lotro.recipetracker.model.GlobalNames;
 import net.gilstraps.lotro.recipetracker.model.VendorItem;
 import net.gilstraps.lotro.recipetracker.util.FileToString;
@@ -36,7 +37,7 @@ public class VendorItems {
         JSONObject object = new JSONObject(text);
         @SuppressWarnings("unchecked") Set<String> keys = object.keySet();
         for ( String key : keys ) {
-            Long approximateCost = object.getLong(key);
+            CurrencyAmount approximateCost = new CurrencyAmount( object.getString(key) );
             VendorItem item = new VendorItem(key,approximateCost);
             names.register(item);
         }
