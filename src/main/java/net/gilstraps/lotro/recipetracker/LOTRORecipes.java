@@ -28,6 +28,9 @@ public class LOTRORecipes {
     private static final String CRAFTED_DIR = "crafted";
 
     public static void main(String[] args) throws IOException {
+        if ( args.length == 0 ) {
+            args = new String[] { System.getProperty("user.dir") };
+        }
         File root = new File(args[0]);
         File ingredientsFile = new File(root, INGREDIENTS);
         checkPerms(ingredientsFile);
@@ -42,7 +45,9 @@ public class LOTRORecipes {
 
         final GlobalNames globalNames = new GlobalNames();
         final RawIngredients rawIngredients = new RawIngredients(globalNames);
+        rawIngredients.parse(ingredientsFile);
         final VendorItems vendorItems = new VendorItems(globalNames);
+        vendorItems.parse(vendorItemsFile);
         final CraftedItems craftedItems = new CraftedItems(globalNames);
         craftedItems.traverse(crafted);
         craftedItems.printSummary(System.out);

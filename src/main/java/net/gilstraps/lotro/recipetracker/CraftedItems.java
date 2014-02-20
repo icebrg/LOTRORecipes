@@ -35,12 +35,7 @@ public class CraftedItems {
     private Map<String, JSONObject> unresolved = new HashMap<>();
     private Map<String, Crafted> resolved = new HashMap<>();
 
-    private class MyVisitor implements FileVisitor<Path> {
-        @Override
-        public FileVisitResult preVisitDirectory(final Path dir, final BasicFileAttributes attrs) throws IOException {
-            // no-op
-            return FileVisitResult.CONTINUE;
-        }
+    private class MyVisitor extends SimpleFileVisitor<Path> {
 
         @Override
         public FileVisitResult visitFile(final Path filePath, final BasicFileAttributes attrs) throws IOException {
@@ -53,12 +48,6 @@ public class CraftedItems {
             System.err.println("Problems visiting " + file);
             return FileVisitResult.CONTINUE;
         }
-
-        @Override
-        public FileVisitResult postVisitDirectory(final Path dir, final IOException exc) throws IOException {
-            // no-op
-            return FileVisitResult.CONTINUE;
-        }
     }
 
     public CraftedItems(GlobalNames names) {
@@ -67,7 +56,7 @@ public class CraftedItems {
 
     public void traverse(final File directory) throws IOException {
         MyVisitor visitor = new MyVisitor();
-        Files.walkFileTree(directory.toPath(), EnumSet.of(FileVisitOption.FOLLOW_LINKS), Integer.MAX_VALUE, visitor);
+        Files.walkFileTree(directory.toPath(), visitor);
     }
 
     public Map<String, Crafted> resolveAll() throws UnableToResolveException {
