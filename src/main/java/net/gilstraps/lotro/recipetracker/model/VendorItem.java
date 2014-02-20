@@ -23,5 +23,5 @@ public class VendorItem extends AbstractIngredient implements BaseIngredient {
         return approximateCost;
     }
 
-    // No equals or hashcode - only name matters for us.
+    // No equals or hashcode - only superclass equals (name) matters for us.
 }
