@@ -27,7 +27,7 @@ public class LOTRORecipes {
     private static final String VENDOR_ITEMS = "VendorItems.json";
     private static final String CRAFTED_DIR = "crafted";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, UnableToResolveException {
         if ( args.length == 0 ) {
             args = new String[] { System.getProperty("user.dir") };
         }
@@ -50,6 +50,7 @@ public class LOTRORecipes {
         vendorItems.parse(vendorItemsFile);
         final CraftedItems craftedItems = new CraftedItems(globalNames);
         craftedItems.traverse(crafted);
+        craftedItems.resolveAll();
         craftedItems.printSummary(System.out);
     }
 

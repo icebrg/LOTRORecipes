@@ -1,6 +1,7 @@
 package net.gilstraps.lotro.recipetracker;
 
 import net.gilstraps.lotro.recipetracker.model.*;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
@@ -92,6 +93,7 @@ public class CraftedItems {
      * Would like to move to a URL which points to a crowd-sourced file on the internet; hopefully soon.
      */
     private void parse(final File f) throws IOException {
+        try {
         String text = readFully(f);
         JSONObject object = new JSONObject(text);
         @SuppressWarnings("unchecked") Set<String> keys = object.keySet();
@@ -100,6 +102,11 @@ public class CraftedItems {
             craftedName = craftedName.substring(0, craftedName.length() - ".json".length());
         }
         checkJSON(craftedName, object);
+        }
+        catch ( JSONException e ) {
+            System.err.println("Problem processing '" + f.getAbsolutePath() + "'");
+            throw e;
+        }
     }
 
     private void checkJSON(final String name, final JSONObject object) {
@@ -113,7 +120,6 @@ public class CraftedItems {
     }
 
     private Crafted tryToResolve(final String name, final JSONObject object) {
-        @SuppressWarnings("unchecked") Set<String> keys = (Set<String>) object.keySet();
         String professionName = object.getString("profession");
         Profession profession = Profession.valueOf(professionName);
         JSONObject components = object.getJSONObject("components");
@@ -132,6 +138,8 @@ public class CraftedItems {
         if (resolvedAll) {
             Crafted crafted = new Crafted(name, profession, recipeItems);
             names.register(crafted);
+            resolved.put(name,crafted);
+            unresolved.remove(name);
             return crafted;
         }
         return null;
