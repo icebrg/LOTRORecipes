@@ -1,7 +1,5 @@
 package net.gilstraps.lotro.recipetracker.model;
 
-import com.sun.tools.corba.se.idl.constExpr.Negative;
-import java.util.Currency;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

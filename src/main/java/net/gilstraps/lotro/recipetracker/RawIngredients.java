@@ -4,14 +4,10 @@ import net.gilstraps.lotro.recipetracker.model.GlobalNames;
 import net.gilstraps.lotro.recipetracker.model.RawIngredient;
 import net.gilstraps.lotro.recipetracker.util.FileToString;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 /**
  * Class which loads a JSON file of raw ingredients. The format is a JSON array of names of raw ingredients

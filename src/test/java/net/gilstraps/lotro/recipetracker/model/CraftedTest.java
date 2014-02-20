@@ -1,15 +1,10 @@
 package net.gilstraps.lotro.recipetracker.model;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.fail;
+import java.util.*;
+
+import static org.junit.Assert.*;
 
 /**
  * Unit test of Crafted

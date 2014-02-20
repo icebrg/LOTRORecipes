@@ -1,7 +1,5 @@
 package net.gilstraps.lotro.recipetracker.model;
 
-import org.w3c.dom.ranges.RangeException;
-
 /**
  * TODO
  */

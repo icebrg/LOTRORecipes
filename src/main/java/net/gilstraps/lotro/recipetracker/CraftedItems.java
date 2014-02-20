@@ -1,32 +1,16 @@
 package net.gilstraps.lotro.recipetracker;
 
-import java.io.PrintStream;
-import java.nio.file.FileVisitOption;
-import java.nio.file.FileVisitResult;
-import java.nio.file.FileVisitor;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import net.gilstraps.lotro.recipetracker.model.Crafted;
-import net.gilstraps.lotro.recipetracker.model.GlobalNames;
-import net.gilstraps.lotro.recipetracker.model.Profession;
-import net.gilstraps.lotro.recipetracker.model.Quantified;
-import net.gilstraps.lotro.recipetracker.model.Thing;
+import net.gilstraps.lotro.recipetracker.model.*;
 import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Set;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.*;
 
 /**
  * Class which loads a collection of JSON files of a crafted items, all in a common directory. The format is a JSON object with

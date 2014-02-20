@@ -1,8 +1,9 @@
 package net.gilstraps.lotro.recipetracker;
 
+import net.gilstraps.lotro.recipetracker.model.GlobalNames;
+
 import java.io.File;
 import java.io.IOException;
-import net.gilstraps.lotro.recipetracker.model.GlobalNames;
 
 /**
  * Main class.
