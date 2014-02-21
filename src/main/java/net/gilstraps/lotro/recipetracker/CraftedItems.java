@@ -85,7 +85,7 @@ public class CraftedItems {
         Collections.sort(names);
         for ( String name : names ) {
             Crafted crafted = resolved.get(name);
-            out.println(crafted.toString());
+            out.println(crafted.describe());
         }
     }
 

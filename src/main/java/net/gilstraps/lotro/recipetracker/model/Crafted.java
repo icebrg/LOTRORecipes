@@ -16,7 +16,7 @@ public class Crafted extends AbstractIngredient implements Thing {
         p.getClass(); // assure not null
         profession = p;
         inputs.getClass(); // assure not null
-        if ( inputs.size() < 1 ) throw new IllegalArgumentException("Crafted items require at lesat one component item.");
+        if (inputs.size() < 1) throw new IllegalArgumentException("Crafted items require at lesat one component item.");
         components = new HashSet<Quantified<Thing>>(inputs);
     }
 
@@ -29,18 +29,18 @@ public class Crafted extends AbstractIngredient implements Thing {
 
     public Map<BaseIngredient, Long> getBaseIngredients() {
         Map<BaseIngredient, Long> ingredients = new HashMap<BaseIngredient, Long>();
-        addBaseIngredients(ingredients,1);
+        addBaseIngredients(ingredients, 1);
         return ingredients;
     }
 
-    private void addBaseIngredients(final Map<BaseIngredient, Long> ingredients,final long multiplier) {
+    private void addBaseIngredients(final Map<BaseIngredient, Long> ingredients, final long multiplier) {
         for (Quantified<Thing> component : components) {
             if (component.getT() instanceof Crafted) {
-                ((Crafted)component.getT()).addBaseIngredients(ingredients,component.getQuantity()*multiplier);
+                ((Crafted) component.getT()).addBaseIngredients(ingredients, component.getQuantity() * multiplier);
             }
-            else if ( component.getT() instanceof BaseIngredient ) {
+            else if (component.getT() instanceof BaseIngredient) {
                 BaseIngredient bi = (BaseIngredient) component.getT();
-                add(ingredients,bi,component.getQuantity()*multiplier);
+                add(ingredients, bi, component.getQuantity() * multiplier);
             }
         }
     }
@@ -49,8 +49,8 @@ public class Crafted extends AbstractIngredient implements Thing {
     static void add(final Map<BaseIngredient, Long> ingredients, final BaseIngredient i, long q) {
         Long existing = ingredients.get(i);
         long e = 0l;
-        if ( existing != null ) e = existing;
-        ingredients.put(i,e+q);
+        if (existing != null) e = existing;
+        ingredients.put(i, e + q);
     }
 
     public Profession getCraftingProfession() {
@@ -62,21 +62,57 @@ public class Crafted extends AbstractIngredient implements Thing {
         StringBuilder sb = new StringBuilder(super.getName() + "{\n"
                 + " profession=" + profession + "\n"
                 + " components= {\n");
-        for ( Quantified<Thing> component : components ) {
+        for (Quantified<Thing> component : components) {
             sb.append("    " + component.getT().getName() + ": " + component.getQuantity() + "\n");
         }
-        sb.append("  }");
+        sb.append("  }\n");
         sb.append("  baseIngredients= {\n");
-        Map<BaseIngredient,Long> baseIngredients = getBaseIngredients();
+        Map<BaseIngredient, Long> baseIngredients = getBaseIngredients();
         List<BaseIngredient> baseIngredientsList = new ArrayList<>();
-        for ( BaseIngredient baseIngredient : baseIngredients.keySet() ) {
+        for (BaseIngredient baseIngredient : baseIngredients.keySet()) {
             baseIngredientsList.add(baseIngredient);
         }
-        Collections.sort(baseIngredientsList,BaseIngredient.BY_NAME);
-        for ( BaseIngredient baseIngredient : baseIngredientsList ) {
-           sb.append( baseIngredient.getName() + ": " + baseIngredients.get(baseIngredient) + "\n");
+        Collections.sort(baseIngredientsList, BaseIngredient.BY_NAME);
+        for (BaseIngredient baseIngredient : baseIngredientsList) {
+            sb.append("    " + baseIngredient.getName() + ": " + baseIngredients.get(baseIngredient) + "\n");
         }
         sb.append("  }\n}\n");
+        return sb.toString();
+    }
+
+    public String describe() {
+        StringBuilder sb = new StringBuilder(super.getName() + " (" + profession + "): ");
+        boolean first = true;
+        for (Quantified<Thing> component : components) {
+            if (!first) {
+                sb.append(", ");
+            }
+            else {
+                first = false;
+            }
+            sb.append("'" + component.getT().getName() + "' x " + component.getQuantity());
+        }
+
+        sb.append("\n");
+        Map<BaseIngredient, Long> baseIngredients = getBaseIngredients();
+        List<BaseIngredient> baseIngredientsList = new ArrayList<>();
+        List<BaseIngredient> vendorIngredientsList = new ArrayList<>();
+        for (BaseIngredient baseIngredient : baseIngredients.keySet()) {
+            if (baseIngredient instanceof VendorItem) {
+                vendorIngredientsList.add(baseIngredient);
+            }
+            else {
+                baseIngredientsList.add(baseIngredient);
+            }
+        }
+        Collections.sort(baseIngredientsList, BaseIngredient.BY_NAME);
+        Collections.sort(vendorIngredientsList, BaseIngredient.BY_NAME);
+        for (BaseIngredient baseIngredient : baseIngredientsList) {
+            sb.append("  " + baseIngredients.get(baseIngredient) + " x '" + baseIngredient.getName() + "'\n");
+        }
+        for (BaseIngredient baseIngredient : vendorIngredientsList) {
+            sb.append("  Buy " + baseIngredients.get(baseIngredient) + " x '" + baseIngredient.getName() + "'\n");
+        }
         return sb.toString();
     }
 }
