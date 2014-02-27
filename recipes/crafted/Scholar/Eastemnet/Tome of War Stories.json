@@ -1,0 +1,7 @@
+{
+  profession: "Scholar",
+  components: {
+    "Book of Ballads": 2,
+    "Riddermark Leather-bound Journal": 1
+  }
+}

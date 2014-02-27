@@ -1,0 +1,9 @@
+{
+  profession: "Scholar",
+  components: {
+    "Scrap of Rohirric Text": 10,
+    "Book of Ballads": 10,
+    "Riddermark Glass Phial": 25,
+    "Large Eastemnet Scroll": 25
+  }
+}

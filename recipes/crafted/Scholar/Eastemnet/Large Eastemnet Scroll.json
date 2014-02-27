@@ -1,0 +1,7 @@
+{
+  profession: "Scholar",
+  components: {
+    "Tome of War Stories": 3,
+    "Book of Ballads": 1
+  }
+}

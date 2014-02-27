@@ -1,9 +1,11 @@
 package net.gilstraps.lotro.recipetracker;
 
+import java.util.Map;
 import net.gilstraps.lotro.recipetracker.model.GlobalNames;
 
 import java.io.File;
 import java.io.IOException;
+import org.json.JSONObject;
 
 /**
  * Main class.
@@ -27,7 +29,7 @@ public class LOTRORecipes {
     private static final String VENDOR_ITEMS = "VendorItems.json";
     private static final String CRAFTED_DIR = "crafted";
 
-    public static void main(String[] args) throws IOException, UnableToResolveException {
+    public static void main(String[] args) throws IOException {
         if ( args.length == 0 ) {
             args = new String[] { System.getProperty("user.dir") };
         }
@@ -50,8 +52,17 @@ public class LOTRORecipes {
         vendorItems.parse(vendorItemsFile);
         final CraftedItems craftedItems = new CraftedItems(globalNames);
         craftedItems.traverse(crafted);
+        try {
         craftedItems.resolveAll();
         craftedItems.printSummary(System.out);
+        }
+        catch (UnableToResolveException e) {
+            final Map<String,JSONObject> unresolved = e.unresolved;
+            for ( String name : unresolved.keySet() ) {
+                System.err.println("Unable to resolve '" + name + "'");
+            }
+        }
+
     }
 
     private static void checkPerms( final File file ) {

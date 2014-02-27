@@ -40,7 +40,9 @@ public class CraftedItems {
 
         @Override
         public FileVisitResult visitFile(final Path filePath, final BasicFileAttributes attrs) throws IOException {
-            parse(filePath.toFile());
+            if (filePath.getFileName().toString().toUpperCase().endsWith(".JSON")) {
+                parse(filePath.toFile());
+            }
             return FileVisitResult.CONTINUE;
         }
 
@@ -66,7 +68,9 @@ public class CraftedItems {
         boolean done = false;
         while (!done && makingProgress) {
             int unresolvedSize = unresolved.size();
-            for (String name : unresolved.keySet()) {
+            // Need to copy the names to avoid referring to a map that gets modified as we resolve things.
+            final Set<String> unresolvedNames = new HashSet<>(unresolved.keySet());
+            for (String name : unresolvedNames ) {
                 JSONObject raw = unresolved.get(name);
                 tryToResolve(name, raw);
             }
@@ -83,7 +87,7 @@ public class CraftedItems {
     public void printSummary(final PrintStream out) {
         List<String> names = new ArrayList<>(resolved.keySet());
         Collections.sort(names);
-        for ( String name : names ) {
+        for (String name : names) {
             Crafted crafted = resolved.get(name);
             out.println(crafted.describe());
         }
@@ -94,16 +98,16 @@ public class CraftedItems {
      */
     private void parse(final File f) throws IOException {
         try {
-        String text = readFully(f);
-        JSONObject object = new JSONObject(text);
-        @SuppressWarnings("unchecked") Set<String> keys = object.keySet();
-        String craftedName = f.getName();
-        if (craftedName.endsWith(".json") || craftedName.endsWith(".JSON")) {
-            craftedName = craftedName.substring(0, craftedName.length() - ".json".length());
+            String text = readFully(f);
+            JSONObject object = new JSONObject(text);
+            @SuppressWarnings("unchecked") Set<String> keys = object.keySet();
+            String craftedName = f.getName();
+            if (craftedName.endsWith(".json") || craftedName.endsWith(".JSON")) {
+                craftedName = craftedName.substring(0, craftedName.length() - ".json".length());
+            }
+            checkJSON(craftedName, object);
         }
-        checkJSON(craftedName, object);
-        }
-        catch ( JSONException e ) {
+        catch (JSONException e) {
             System.err.println("Problem processing '" + f.getAbsolutePath() + "'");
             throw e;
         }
@@ -138,7 +142,7 @@ public class CraftedItems {
         if (resolvedAll) {
             Crafted crafted = new Crafted(name, profession, recipeItems);
             names.register(crafted);
-            resolved.put(name,crafted);
+            resolved.put(name, crafted);
             unresolved.remove(name);
             return crafted;
         }

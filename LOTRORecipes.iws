@@ -61,22 +61,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java" line="77" class="net.gilstraps.lotro.recipetracker.CraftedItems" package="net.gilstraps.lotro.recipetracker">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java" line="52" class="net.gilstraps.lotro.recipetracker.LOTRORecipes" package="net.gilstraps.lotro.recipetracker">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java" line="68" class="net.gilstraps.lotro.recipetracker.CraftedItems" package="net.gilstraps.lotro.recipetracker">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -101,10 +86,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CraftedItems.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CraftedItems.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="42" selection-start="3423" selection-end="3423" vertical-scroll-proportion="0.0" vertical-offset="749" max-vertical-offset="2058">
+            <state line="77" column="0" selection-start="3190" selection-end="3190" vertical-scroll-proportion="0.24937028" vertical-offset="880" max-vertical-offset="2268">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4031#4061#1" expanded="true" />
+                <element signature="e#5195#5225#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleFileVisitor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/src.zip!/java/nio/file/SimpleFileVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="13" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1302">
               <folding />
             </state>
           </provider>
@@ -113,19 +111,16 @@
       <file leaf-file-name="Crafted.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Crafted.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="74" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0" vertical-offset="967" max-vertical-offset="1736">
-              <folding>
-                <element signature="e#2083#2084#0" expanded="true" />
-                <element signature="e#2116#2117#0" expanded="true" />
-              </folding>
+            <state line="113" column="74" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0" vertical-offset="1582" max-vertical-offset="1736">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="19" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.6287879" vertical-offset="412" max-vertical-offset="1204">
+            <state line="65" column="19" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1204">
               <folding />
             </state>
           </provider>
@@ -143,7 +138,16 @@
       <file leaf-file-name="LOTRORecipes.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="41" selection-start="8" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="994">
+            <state line="55" column="26" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="1120">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnableToResolveException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/UnableToResolveException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="13" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
               <folding />
             </state>
           </provider>
@@ -190,10 +194,10 @@
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/VendorItems.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/VendorItem.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmountTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Crafted.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java" />
       </list>
     </option>
   </component>
@@ -205,8 +209,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="33" />
+    <option name="x" value="457" />
+    <option name="y" value="94" />
     <option name="width" value="1967" />
     <option name="height" value="1288" />
   </component>
@@ -365,6 +369,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crafted" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crafted" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scholar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LOTRORecipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crafted" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scholar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Eastemnet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,15 +696,17 @@
       <workItem from="1392791082316" duration="108000" />
       <workItem from="1392868124007" duration="597000" />
       <workItem from="1392942145516" duration="3259000" />
+      <workItem from="1393208019983" duration="108000" />
+      <workItem from="1393464298334" duration="1037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18665000" />
+    <option name="totallyTimeSpent" value="19810000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="33" width="1967" height="1288" extended-state="0" />
-    <editor active="true" />
+    <frame x="457" y="94" width="1967" height="1288" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -635,11 +721,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32803348" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3387013" sideWeight="0.26707318" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3387013" sideWeight="0.2676399" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3387013" sideWeight="0.73170733" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31380752" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3387013" sideWeight="0.73114353" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31213388" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36695278" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -670,25 +756,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/CurrencyAmount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="59" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1008" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Quantified.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Crafted.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="9" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="994">
-          <folding>
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2116#2117#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -795,34 +866,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="42" selection-start="3423" selection-end="3423" vertical-scroll-proportion="0.0" vertical-offset="749" max-vertical-offset="2058">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/model/Crafted.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="113" column="74" selection-start="4641" selection-end="4641" vertical-scroll-proportion="0.0" vertical-offset="967" max-vertical-offset="1736">
-          <folding>
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2116#2117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="41" selection-start="8" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="994">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="19" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.6287879" vertical-offset="412" max-vertical-offset="1204">
+        <state line="65" column="19" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.0" vertical-offset="16" max-vertical-offset="1204">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/src.zip!/java/nio/file/SimpleFileVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="13" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1302">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/UnableToResolveException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/LOTRORecipes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="26" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="1120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gilstraps/lotro/recipetracker/CraftedItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="0" selection-start="3190" selection-end="3190" vertical-scroll-proportion="0.24937028" vertical-offset="880" max-vertical-offset="2268">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4031#4061#1" expanded="true" />
+            <element signature="e#5195#5225#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
