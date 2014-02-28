@@ -12,6 +12,7 @@ import java.nio.charset.Charset;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
+import sun.rmi.rmic.Names;
 
 /**
  * Class which loads a collection of JSON files of a crafted items, all in a common directory. The format is a JSON object with
@@ -35,23 +36,6 @@ public class CraftedItems {
     private GlobalNames names;
     private Map<String, JSONObject> unresolved = new HashMap<>();
     private Map<String, Crafted> resolved = new HashMap<>();
-
-    private class MyVisitor extends SimpleFileVisitor<Path> {
-
-        @Override
-        public FileVisitResult visitFile(final Path filePath, final BasicFileAttributes attrs) throws IOException {
-            if (filePath.getFileName().toString().toUpperCase().endsWith(".JSON")) {
-                parse(filePath.toFile());
-            }
-            return FileVisitResult.CONTINUE;
-        }
-
-        @Override
-        public FileVisitResult visitFileFailed(final Path file, final IOException exc) throws IOException {
-            System.err.println("Problems visiting " + file);
-            return FileVisitResult.CONTINUE;
-        }
-    }
 
     public CraftedItems(GlobalNames names) {
         this.names = names;
@@ -84,13 +68,8 @@ public class CraftedItems {
         return new HashMap<>(resolved);
     }
 
-    public void printSummary(final PrintStream out) {
-        List<String> names = new ArrayList<>(resolved.keySet());
-        Collections.sort(names);
-        for (String name : names) {
-            Crafted crafted = resolved.get(name);
-            out.println(crafted.describe());
-        }
+    public Crafted get(final String name ) {
+        return resolved.get(name);
     }
 
     /**
@@ -153,4 +132,28 @@ public class CraftedItems {
         byte[] encoded = Files.readAllBytes(Paths.get(f.getAbsolutePath()));
         return UTF8.decode(ByteBuffer.wrap(encoded)).toString();
     }
+
+    public Set<String> getNames() {
+        return resolved.keySet();
+    }
+
+
+    private class MyVisitor extends SimpleFileVisitor<Path> {
+
+        @Override
+        public FileVisitResult visitFile(final Path filePath, final BasicFileAttributes attrs) throws IOException {
+            if (filePath.getFileName().toString().toUpperCase().endsWith(".JSON")) {
+                parse(filePath.toFile());
+            }
+            return FileVisitResult.CONTINUE;
+        }
+
+        @Override
+        public FileVisitResult visitFileFailed(final Path file, final IOException exc) throws IOException {
+            System.err.println("Problems visiting " + file);
+            return FileVisitResult.CONTINUE;
+        }
+    }
+
+
 }

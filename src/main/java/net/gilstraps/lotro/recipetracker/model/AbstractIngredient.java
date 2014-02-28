@@ -33,4 +33,9 @@ public abstract class AbstractIngredient implements Thing {
     public int hashCode() {
         return name.hashCode();
     }
+
+    @Override
+    public String toString() {
+        return "'" + name + "'";
+    }
 }
